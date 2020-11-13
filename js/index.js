@@ -23,7 +23,8 @@ const slides = [
     title: 'Light Breakfast',
     category: 'Photography',
     img: '../img/home-6-4.jpg'
-  }
+  },
+  
 ]
 
 const interleaveOffset = 0.75;
@@ -96,7 +97,7 @@ const swiper = new Swiper(slider, {
         let innerOffset = swiper.height * interleaveOffset;
         let innerTranslate = slideProgress * innerOffset;
 
-        TweenMax.set(swiper.slides[i].querySelector(".slide-inner"), {
+        gsap.set(swiper.slides[i].querySelector(".slide-inner"), {
           y: innerTranslate,
         });
       }
